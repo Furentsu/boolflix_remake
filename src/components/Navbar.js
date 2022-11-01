@@ -4,7 +4,7 @@ import avatar from "../images/avatar.png";
 
 export default function Navbar() {
   return (
-    <header className="layout-mobile flex justify-between h-16 ">
+    <header className="layout w-full flex justify-between h-16 fixed top-0 z-20">
       <div className="h-full">
         <img className="h-full" src={logo} alt="Netflix logo"></img>
       </div>

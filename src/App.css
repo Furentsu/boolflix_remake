@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .layout {
-  @apply px-12;
+  @apply px-4;
 }
 
 .btn-white {
@@ -12,10 +12,4 @@
 
 .btn-dark {
   @apply bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg py-2 rounded;
-}
-
-/* MOBILE RULES */
-
-.layout-mobile {
-  @apply px-4;
 }
