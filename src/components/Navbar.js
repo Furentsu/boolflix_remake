@@ -4,13 +4,13 @@ import avatar from "../images/avatar.png";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between bg-black">
-      <div className="w-52">
-        <img src={logo} alt="Netflix logo"></img>
+    <header className="layout-mobile flex justify-between h-16 ">
+      <div className="h-full">
+        <img className="h-full" src={logo} alt="Netflix logo"></img>
       </div>
-      <div className="w-16 flex self-center mr-4">
-        <img src={avatar} alt="Avatar"></img>
+      <div className="h-full flex self-center py-3">
+        <img className="h-full" src={avatar} alt="Avatar"></img>
       </div>
-    </div>
+    </header>
   );
 }

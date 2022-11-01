@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.layout {
+  @apply px-12;
+}
+
+.btn-white {
+  @apply bg-white hover:bg-gray-400 text-black font-bold text-lg py-2 px-0 rounded;
+}
+
+.btn-dark {
+  @apply bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg py-2 rounded;
+}
+
+/* MOBILE RULES */
+
+.layout-mobile {
+  @apply px-4;
+}
