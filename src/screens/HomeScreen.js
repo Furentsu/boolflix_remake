@@ -9,7 +9,36 @@ export default function HomeScreen() {
     <div>
       <Navbar />
       <Jumbotron />
-      <Row title="Horror" fetchUrl={requests.fetchHorror} />
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginalsMovies}
+        isPoster={true}
+        isLarge={true}
+      />
+      <Row
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+        isPoster={false}
+        isLarge={false}
+      />
+      <Row
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+        isPoster={false}
+        isLarge={false}
+      />
+      <Row
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+        isPoster={false}
+        isLarge={false}
+      />
+      <Row
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+        isPoster={false}
+        isLarge={false}
+      />
     </div>
   );
 }
