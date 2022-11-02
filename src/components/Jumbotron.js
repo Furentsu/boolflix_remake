@@ -32,7 +32,7 @@ export default function Jumbotron() {
       className="layout h-[100vh] pt-20 sm:pt-40 bg-cover bg-center bg-no-repeat relative"
     >
       <div className="max-w-100vw flex flex-col items-start sm:justify-center pt-10 md:max-w-[80%] lg:max-w-[50%] xl:max-w-[55%] z-10 relative">
-        <h1 className="text-white text-3xl pb-10 font-bold">
+        <h1 className="text-white text-3xl md:text-5xl pb-10 font-bold">
           {movie?.name || movie?.title}
         </h1>
         <p className="text-white text-lg pb-10">

@@ -9,7 +9,7 @@ export default function HomeScreen() {
     <div>
       <Navbar />
       <Jumbotron />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorror} />
+      <Row title="Horror" fetchUrl={requests.fetchHorror} />
     </div>
   );
 }

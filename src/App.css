@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .layout {
-  @apply px-4;
+  @apply px-5;
 }
 
 .btn-white {

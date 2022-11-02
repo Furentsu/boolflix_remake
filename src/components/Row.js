@@ -15,10 +15,10 @@ export default function Row({ title, fetchUrl }) {
   }, [fetchUrl]);
 
   return (
-    <div className="layout">
-      <h2 className="layout text-5xl text-white pt-16 pb-4">{title}</h2>
+    <div className="mb-16">
+      <h2 className="pl-5 text-5xl text-white pt-16">{title}</h2>
 
-      <div className="flex overflow-x-scroll scrollbar-hide">
+      <div className="layout flex overflow-x-scroll scrollbar-hide py-12">
         <div className="flex flex-nowrap"></div>
         {movies.map((movie) => {
           return (
