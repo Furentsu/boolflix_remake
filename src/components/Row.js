@@ -32,7 +32,13 @@ export default function Row({ title, fetchUrl, isPoster, isLarge }) {
 
   return (
     <div className="">
-      <h2 className="pl-5 text-4xl font-semibold text-white">{title}</h2>
+      {filtered.length !== 0 ? (
+        <h2 className="pl-5 text-4xl font-semibold text-white">{title}</h2>
+      ) : (
+        <h2 className="pl-5 text-2xl font-semibold text-white">
+          Sorry...no results in {title}
+        </h2>
+      )}
 
       <div
         className={`layout flex overflow-x-scroll scrollbar-hide ${
@@ -56,21 +62,3 @@ export default function Row({ title, fetchUrl, isPoster, isLarge }) {
     </div>
   );
 }
-
-// {needle !== "" &&
-// movies.map((filtered) => {
-//   console.log(filtered.title);
-//   return (
-//     ((isPoster && filtered.poster_path) ||
-//       (!isPoster && filtered.backdrop_path)) && (
-//       <Card
-//         key={filtered.id}
-//         title={filtered.name || filtered.title}
-//         poster={
-//           isPoster ? filtered.poster_path : filtered.backdrop_path
-//         }
-//         isLarge={isLarge}
-//       />
-//     )
-//   );
-// })}

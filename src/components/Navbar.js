@@ -2,6 +2,7 @@ import React from "react";
 import Searchbar from "./Searchbar";
 import logo from "../images/logo.png";
 import avatar from "../images/avatar.png";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -9,6 +10,14 @@ export default function Navbar() {
       <div className="h-full">
         <img className="h-full" src={logo} alt="Netflix logo"></img>
       </div>
+      <ul className="h-full flex items-center">
+        <li className="text-white pr-5">
+          <Link to={`movies`}>Movies</Link>
+        </li>
+        <li className="text-white">
+          <Link to={`tv`}>Tv Series</Link>
+        </li>
+      </ul>
       <div className="flex items-center">
         <Searchbar />
       </div>
