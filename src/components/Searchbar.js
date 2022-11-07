@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 
-export default function Searchbar() {
-  const dispatch = useDispatch();
+export default function Searchbar(props) {
   const [query, setQuery] = useState("");
 
   const handleChange = (e) => setQuery(e.target.value);
@@ -10,10 +8,7 @@ export default function Searchbar() {
   const handleClick = () => {
     const userInput = query;
 
-    if (userInput) {
-      dispatch({ type: "search/movieSearch", payload: userInput });
-      setQuery("");
-    }
+    props?.onSearch?.(userInput);
   };
 
   return (
