@@ -1,8 +1,8 @@
 import React from "react";
-import HomeScreen from "./screens/HomeScreen";
-import Movies from "./screens/MoviesScreen";
-import TvSeries from "./screens/TvSeriesScreen";
-import ErrorPage from "./screens/ErrorPage";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import TvSeries from "./pages/TvSeries";
+import ErrorPage from "./pages/ErrorPage";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomeScreen />,
+      element: <Home />,
       errorElement: <ErrorPage />,
     },
     {

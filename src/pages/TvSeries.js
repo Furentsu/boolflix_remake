@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function TvSeriesScreen() {
+export default function TvSeries() {
   return <div className="text-white">TvSeries!!</div>;
 }
