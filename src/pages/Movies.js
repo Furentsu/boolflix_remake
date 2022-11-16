@@ -22,7 +22,7 @@ export default function Movies() {
       <h1 className="text-white text-4xl">Discover Movies</h1>
 
       <div className="w-full py-20">
-        <div className="w-full flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 lg:gap-20 overscroll-x-hidden">
+        <div className="w-full flex flex-col justify-center items-center self-center sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-20 overscroll-x-hidden">
           {movies.map((movie, key) => (
             <ReverseCard
               key={key}
