@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios/axios";
 import requests from "../axios/requests";
+import truncate from "../utils/utilities";
 
 export default function Jumbotron() {
   const [movie, setMovie] = useState([]);
@@ -19,10 +20,6 @@ export default function Jumbotron() {
 
     fetchData();
   }, []);
-
-  function truncate(text, n) {
-    return text?.length > n ? text.substr(0, n - 1) + "..." : text;
-  }
 
   return (
     <div

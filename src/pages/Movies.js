@@ -19,15 +19,17 @@ export default function Movies() {
 
   return (
     <div className="max-w-screen layout pt-7">
-      <h1 className="text-white text-5xl">Discover Movies</h1>
+      <h1 className="text-white text-4xl">Discover Movies</h1>
 
-      <div className="w-full py-10">
-        <div className="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 lg:gap-20 overscroll-x-hidden">
+      <div className="w-full py-20">
+        <div className="w-full flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 lg:gap-20 overscroll-x-hidden">
           {movies.map((movie, key) => (
             <ReverseCard
               key={key}
               title={movie.title}
               poster={movie.poster_path}
+              vote={movie.vote_average}
+              overview={movie.overview}
             />
           ))}
         </div>
@@ -35,3 +37,5 @@ export default function Movies() {
     </div>
   );
 }
+
+// TO DO --> Layout in comune con TV series - Qualche filtro (lingua) - Firebase
