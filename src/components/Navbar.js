@@ -14,6 +14,7 @@ export default function Navbar(props) {
       setShow(false);
     }
   };
+
   const navbarData = {
     query: "",
   };
@@ -35,18 +36,22 @@ export default function Navbar(props) {
       }`}
     >
       <div className="h-full">
-        <img className="h-full" src={logo} alt="Netflix logo"></img>
+        <Link to={`/`}>
+          <img className="h-full" src={logo} alt="Netflix logo"></img>
+        </Link>
       </div>
       <ul className="h-full flex items-center">
         <li className="text-white px-5">
-          <Link to={`movies`}>Movies</Link>
+          <Link to={`/movies`}>Movies</Link>
         </li>
         <li className="text-white">
-          <Link to={`tv`}>Tv Series</Link>
+          <Link to={`/tv`}>Tv Series</Link>
         </li>
       </ul>
       <div className="flex items-center flex-grow justify-around">
-        <Searchbar onSearch={onSearch} />
+        {window.location.href === "http://localhost:3000/" ? (
+          <Searchbar onSearch={onSearch} />
+        ) : null}
       </div>
       <div className="h-full flex self-center py-3">
         <img className="h-full" src={avatar} alt="Avatar"></img>

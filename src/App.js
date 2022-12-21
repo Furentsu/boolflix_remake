@@ -1,33 +1,40 @@
-import React from "react";
+import { React } from "react";
 import Home from "./pages/Home";
-import Movies from "./pages/Movies";
-import TvSeries from "./pages/TvSeries";
+import Media from "./pages/Media";
 import ErrorPage from "./pages/ErrorPage";
+import requests from "./axios/requests";
+
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "movies",
-      element: <Movies />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "tv",
-      element: <TvSeries />,
-      errorElement: <ErrorPage />,
-    },
-  ]);
-
   return (
     <div className="app">
-      <RouterProvider router={router} />
+      <div className="main">
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+
+            <Route
+              exact
+              path="movies"
+              element={
+                <Media url={requests.fetchPopularMovies} current={"/movies"} />
+              }
+            />
+
+            <Route
+              exact
+              path="tv"
+              element={
+                <Media url={requests.fetchPopularTvSeries} current={"/tv"} />
+              }
+            />
+
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
